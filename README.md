@@ -1,3 +1,9 @@
-# l-scraping
+# Web Scraping with Goquery and Colly
 
-https://github.com/gocolly/colly
+### Usage
+```bash
+go get github.com/PuerkitoBio/goquery
+go get github.com/gocolly/colly
+```
+
+- https://pkg.go.dev/github.com/PuerkitoBio/goquery
