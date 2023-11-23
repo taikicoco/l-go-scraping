@@ -1,4 +1,4 @@
-package main
+package scraping
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"github.com/gocolly/colly/v2"
 )
 
-func getByColly() {
+func getByColly(url string) {
 	c := colly.NewCollector()
 	var forms [][]string
 	c.OnHTML("form", func(e *colly.HTMLElement) {

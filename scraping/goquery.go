@@ -1,4 +1,4 @@
-package main
+package scraping
 
 import (
 	"log"
@@ -13,7 +13,7 @@ type InputField struct {
 	Type string
 }
 
-func getByGoquery(url string) []InputField {
+func GetByGoquery(url string) []InputField {
 	var fields []InputField
 	webPage := (url)
 	res, err := http.Get(webPage)

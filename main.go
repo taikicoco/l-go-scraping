@@ -2,14 +2,18 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"os"
+	"server/scraping"
 )
 
-var url string = "example.com"
-
 func main() {
-	getByGoquery(url)
-	inputFields := getByGoquery(url)
+	var url string = os.Getenv("URL")
+	if url == "" {
+		log.Fatal("URL environment variable is not set")
+	}
 
+	inputFields := scraping.GetByGoquery(url)
 	for _, field := range inputFields {
 		fmt.Printf("%+v\n", field)
 	}
